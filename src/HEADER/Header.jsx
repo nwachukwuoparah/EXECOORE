@@ -97,8 +97,8 @@ const Header = (props) => {
           }}
           disableGutters={true}
         >
-          <img src={logo} style={{ width: "20%" }} />
-          <SearchOutlinedIcon sx={{ color: "white" }} />
+          {/* <img src={logo} style={{ width: "20%" }} />
+          <SearchOutlinedIcon sx={{ color: "white" }} /> */}
         </Container>
 
         <Container
