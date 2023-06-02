@@ -1,6 +1,5 @@
 import { Container, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
-// import logo from "./Logo.svg";
 import Header_select from "../COMPONENTS/Header_select";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 const Header = (props) => {
@@ -97,8 +96,6 @@ const Header = (props) => {
           }}
           disableGutters={true}
         >
-          {/* <img src={logo} style={{ width: "20%" }} />
-          <SearchOutlinedIcon sx={{ color: "white" }} /> */}
         </Container>
 
         <Container
