@@ -1,0 +1,365 @@
+import React, { useState, useEffect } from "react";
+import "./landing_page.css";
+import { Container, Stack, Typography } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Hero_section from "./HERO_SECTION/Hero_section";
+import About_card from "../COMPONENTS/About-page_card";
+import About_component from "../COMPONENTS/About-page_component";
+import image_16 from "./Images/image-16.jpeg";
+import sign_dark from "./Images/sign-dark.png";
+import logo_1 from "./Images/logo-1.png";
+import Service_card from "../COMPONENTS/Service_card";
+import { Parallax } from "react-parallax";
+import Contact_form from "../COMPONENTS/Contact_form";
+
+const Landing_page = (props) => {
+  const [scroll, setScroll] = useState();
+  const ServiceCard = [
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+    {
+      image: image_16,
+      text1: "Security audit",
+      arr: [
+        { text: "PRICE", price: `$50` },
+        { text: "PRICE", price: `$50`, border: true },
+        { text: "PRICE", price: `$50`, border: true },
+      ],
+      text2: `Excepteur sint occaecat cupidatat non proidento
+       in culpa qui officia deserunt mollit anim id est laborum.`,
+    },
+  ];
+
+  useEffect(() => {
+    function handleScroll() {
+      setScroll(window.pageYOffset / 4);
+      console.log(window.pageYOffset);
+      console.log(window.pageYOffset / 4);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scroll]);
+
+  return (
+    <Container
+      disableGutters={true}
+      maxWidth="100%"
+      sx={{
+        height: "805vh",
+        // overflow: "hidden",
+      }}
+    >
+      <Hero_section />
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{
+          width: {
+            xs: "85%",
+            sm: "85%",
+            md: "84%",
+            lg: "83",
+            xl: "85",
+          },
+          // bgcolor: "greenyellow",
+          height: "92.5vh",
+        }}
+      >
+        <Stack
+          direction={{ xs: "row", sm: "row", md: "row" }}
+          sx={{ bgcolor: "", height: "235px" }}
+        >
+          <Grid2
+            sx={{ width: "87%" }}
+            container
+            spacing={{ xs: 2, md: 4 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+            xs={5}
+            sm={4}
+            md={20}
+          >
+            {[1, 2, 3, 4].map((_, index) => (
+              <Grid2 xs={5} sm={4} md={3} key={index}>
+                <About_card />
+              </Grid2>
+            ))}
+          </Grid2>
+        </Stack>
+
+        <About_component
+          image={image_16}
+          image1={sign_dark}
+          text1=" ABOUT US"
+          text2="Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod
+          tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim
+          veniam quis nostrud exercitation ullamco laboris."
+          text3="Albert Patterson"
+          text4="Founder & CEO"
+        />
+      </Container>
+
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{ backgroundColor: "rgb(228, 237, 243)", padding: "100px 0px" }}
+      >
+        <Container
+          disableGutters={true}
+          maxWidth={false}
+          sx={{
+            width: {
+              xs: "85%",
+              sm: "85%",
+              md: "84%",
+              lg: "83",
+              xl: "85",
+            },
+            // bgcolor: "greenyellow",
+            // height: "200vh",
+          }}
+        >
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Stack>
+              <Typography
+                sx={{
+                  fontWeight: 700,
+                  color: "#03BFCB",
+                  lineHeight: "30px",
+                  fontSize: "14px",
+                }}
+              >
+                OUR SERVICES
+              </Typography>
+              <Typography
+                sx={{
+                  fontWeight: 900,
+                  color: "rgb(0, 71, 103)",
+                  lineHeight: "40px",
+                  fontSize: "28px",
+                }}
+              >
+                Core Technology services
+              </Typography>
+            </Stack>
+            <Stack
+              sx={{
+                color: "rgb(64, 77, 96)",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              {" "}
+              <Typography>All services</Typography>
+            </Stack>
+          </Stack>
+
+          <Stack
+            direction={{ xs: "row", sm: "row", md: "row" }}
+            sx={{ bgcolor: "", marginTop: "62px" }}
+          >
+            <Grid2
+              sx={{ width: "87%" }}
+              container
+              spacing={{ xs: 2, md: 4 }}
+              columns={{ xs: 4, sm: 8, md: 12 }}
+              xs={5}
+              sm={4}
+              md={20}
+            >
+              {ServiceCard.map((i, index) => (
+                <Grid2 xs={5} sm={5} md={4} key={index}>
+                  <Service_card {...i} />
+                </Grid2>
+              ))}
+            </Grid2>
+          </Stack>
+        </Container>
+      </Container>
+
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{
+          width: {
+            xs: "85%",
+            sm: "85%",
+            md: "84%",
+            lg: "83",
+            xl: "85",
+          },
+          padding: "100px 0px",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Stack spacing={4} sx={{ bgcolor: "", width: "49%" }}>
+          <Stack>
+            <Typography
+              variant="p"
+              sx={{
+                fontWeight: 700,
+                color: "#03BFCB",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              CONTACT US NOW
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 900,
+                color: "rgb(0, 71, 103)",
+                lineHeight: "40px",
+                fontSize: "28px",
+              }}
+            >
+              Request a free <br />
+              consultation with us
+            </Typography>
+          </Stack>
+          <Typography
+            sx={{
+              fontWeight: 500,
+              color: "rgb(64, 77, 96)",
+              lineHeight: "30px",
+              fontSize: "14px",
+            }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod
+            tempor incididunt utlabore et dolore aliqua.
+          </Typography>
+          <Typography
+            sx={{
+              fontWeight: 600,
+              color: "rgb(64, 77, 96)",
+              lineHeight: "30px",
+              fontSize: "14px",
+            }}
+          >
+            You accept our policy
+          </Typography>
+        </Stack>
+        <Stack sx={{ width: "49%", bgcolor: "" }}>
+          <Contact_form />
+        </Stack>
+      </Container>
+
+      <Parallax
+        className="Parallax"
+        // blur={{ min: -20, max: -20 }}
+        strength={90}
+        bgImage={image_16}
+      >
+        <Stack
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "white",
+            textAlign: "center",
+            bgcolor: "rgb(26, 56, 250,20%)",
+            padding: " 60px 0px",
+          }}
+        >
+          <a className="Parallax_link" ></a>
+          <Typography
+            sx={{
+              lineHeight: "37px",
+              maxWidth: "600px",
+              fontSize: "25px",
+              fontWeight: 900,
+            }}
+          >
+            Find a <span className="paralax_text"> evolved </span>
+            and strong connection withs software and hardware communication
+          </Typography>
+
+          <Stack sx={{ width: "80%" }} bgcolor="red">
+            <Stack width="16%">
+              <img src={logo_1} />
+            </Stack>
+          </Stack>
+        </Stack>
+      </Parallax>
+
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{
+          width: {
+            xs: "85%",
+            sm: "85%",
+            md: "84%",
+            lg: "83",
+            xl: "85",
+          },
+          padding: "60px",
+          bgcolor: "red",
+        }}
+      ></Container>
+    </Container>
+  );
+};
+
+export default Landing_page;
