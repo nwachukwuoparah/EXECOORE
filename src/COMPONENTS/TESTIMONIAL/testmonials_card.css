@@ -1,0 +1,44 @@
+.testmonial_card_text {
+  /* width: 100%; */
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s;
+  border-color: #03bfcb;
+  text-align: left;
+  border-radius: 3px;
+  padding: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  color: rgb(64, 77, 96);
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.testmonial_card_text:before {
+  position: absolute;
+  bottom: -17px;
+  left: 61px;
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.66);
+  transform: rotate(-45deg);
+  width: 1px;
+  height: 18px;
+  filter: blur(2px);
+}
+
+.testmonial_card_text:after {
+    position: absolute;
+    bottom: -20px;
+    left: 33px;
+    content: '';
+    display: block;
+    border-width: 20px;
+    border-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: #f8f8f8;
+  }

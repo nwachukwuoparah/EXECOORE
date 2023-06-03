@@ -60,7 +60,7 @@ const Header = (props) => {
               position: "fixed",
               width: "100%",
               top: drop ? "0px" : "-150px",
-              zIndex: 5,
+              zIndex: 1000,
               transition: drop ? "ease-in-out 2s" : null,
             }
           : {
@@ -71,7 +71,7 @@ const Header = (props) => {
               alignItems: "center",
               width: "100%",
               right: "0px",
-              zIndex: 5,
+              zIndex: 1000,
               // transition: "ease-in 6s",
             }
       }
@@ -95,8 +95,7 @@ const Header = (props) => {
             borderBottom: "1px solid #f8f8f8",
           }}
           disableGutters={true}
-        >
-        </Container>
+        ></Container>
 
         <Container
           sx={{

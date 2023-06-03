@@ -8,9 +8,16 @@ import About_component from "../COMPONENTS/About-page_component";
 import image_16 from "./Images/image-16.jpeg";
 import sign_dark from "./Images/sign-dark.png";
 import logo_1 from "./Images/logo-1.png";
+import logo_2 from "./Images/logo-2.png";
+import logo_3 from "./Images/logo-3.png";
+import logo_4 from "./Images/logo-4.png";
+import logo_5 from "./Images/logo-5.png";
+import logo_6 from "./Images/logo-6.png";
 import Service_card from "../COMPONENTS/Service_card";
 import { Parallax } from "react-parallax";
 import Contact_form from "../COMPONENTS/Contact_form";
+import Testmonial_card from "../COMPONENTS/TESTIMONIAL/Testmonials_card";
+import Accordion_comp from "../COMPONENTS/Accordion_comp";
 
 const Landing_page = (props) => {
   const [scroll, setScroll] = useState();
@@ -319,10 +326,11 @@ const Landing_page = (props) => {
             color: "white",
             textAlign: "center",
             bgcolor: "rgb(26, 56, 250,20%)",
-            padding: " 60px 0px",
+            padding: " 100px 0px",
           }}
+          spacing={7.3}
         >
-          <a className="Parallax_link" ></a>
+          <a className="Parallax_link"></a>
           <Typography
             sx={{
               lineHeight: "37px",
@@ -335,10 +343,27 @@ const Landing_page = (props) => {
             and strong connection withs software and hardware communication
           </Typography>
 
-          <Stack sx={{ width: "80%" }} bgcolor="red">
-            <Stack width="16%">
-              <img src={logo_1} />
-            </Stack>
+          <Stack bgcolor="" height="50px" direction="row">
+            {[
+              { image: logo_1, border: false },
+              { image: logo_2, border: true },
+              { image: logo_3, border: true },
+              { image: logo_4, border: true },
+              { image: logo_5, border: true },
+              { image: logo_6, border: true },
+            ].map((i) => (
+              <Stack
+                direction="row"
+                alignItems="center"
+                justifyContent="center"
+                height="100%"
+                bgcolor=""
+                padding={i.border ? "0px 22.5px" : "0px 30px 0px 0px"}
+                borderLeft={i.border && "1px solid #03bfcb"}
+              >
+                <img style={{ width: "128px", height: "30px" }} src={i.image} />
+              </Stack>
+            ))}
           </Stack>
         </Stack>
       </Parallax>
@@ -347,17 +372,79 @@ const Landing_page = (props) => {
         disableGutters={true}
         maxWidth={false}
         sx={{
-          width: {
-            xs: "85%",
-            sm: "85%",
-            md: "84%",
-            lg: "83",
-            xl: "85",
-          },
-          padding: "60px",
-          bgcolor: "red",
+          bgcolor: "rgb(228, 237, 243)",
         }}
-      ></Container>
+      >
+        <Container
+          disableGutters={true}
+          maxWidth={false}
+          sx={{
+            width: {
+              xs: "85%",
+              sm: "85%",
+              md: "84%",
+              lg: "83",
+              xl: "85",
+            },
+            padding: "100px 0px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "47px",
+          }}
+        >
+          <Stack>
+            <Typography
+              variant="p"
+              sx={{
+                fontWeight: 700,
+                color: "#03BFCB",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              TESTIMONIALS FEEDBACK
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 900,
+                color: "rgb(0, 71, 103)",
+                lineHeight: "40px",
+                fontSize: "28px",
+              }}
+            >
+              What our clients think
+            </Typography>
+          </Stack>
+
+          <Stack
+            width="100%"
+            direction="row"
+            justifyContent="space-between"
+            sx={{ cursor: "grab", userSelect: "none" }}
+          >
+            {[1, 2, 3].map((i) => (
+              <Testmonial_card />
+            ))}
+          </Stack>
+        </Container>
+      </Container>
+
+      <Container>
+        <Stack>
+          <Stack>
+            <Typography></Typography>
+            <Typography></Typography>
+          </Stack>
+          <Typography></Typography>
+          <Accordion_comp />
+          <Accordion_comp />
+          <Accordion_comp />
+        </Stack>
+        <Stack>
+          <img src="" />
+        </Stack>
+      </Container>
     </Container>
   );
 };
