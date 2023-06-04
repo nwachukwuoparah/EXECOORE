@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./landing_page.css";
 import { Container, Stack, Typography } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Grid from "@mui/material/Grid";
 import Hero_section from "./HERO_SECTION/Hero_section";
 import About_card from "../COMPONENTS/About-page_card";
 import About_component from "../COMPONENTS/About-page_component";
@@ -13,6 +13,7 @@ import logo_3 from "./Images/logo-3.png";
 import logo_4 from "./Images/logo-4.png";
 import logo_5 from "./Images/logo-5.png";
 import logo_6 from "./Images/logo-6.png";
+import box_3 from "./Images/box-3.png";
 import Service_card from "../COMPONENTS/Service_card";
 import { Parallax } from "react-parallax";
 import Contact_form from "../COMPONENTS/Contact_form";
@@ -132,7 +133,7 @@ const Landing_page = (props) => {
           direction={{ xs: "row", sm: "row", md: "row" }}
           sx={{ bgcolor: "", height: "235px" }}
         >
-          <Grid2
+          <Grid
             sx={{ width: "87%" }}
             container
             spacing={{ xs: 2, md: 4 }}
@@ -142,11 +143,11 @@ const Landing_page = (props) => {
             md={20}
           >
             {[1, 2, 3, 4].map((_, index) => (
-              <Grid2 xs={5} sm={4} md={3} key={index}>
+              <Grid xs={5} sm={4} md={3} key={index}>
                 <About_card />
-              </Grid2>
+              </Grid>
             ))}
-          </Grid2>
+          </Grid>
         </Stack>
 
         <About_component
@@ -220,25 +221,28 @@ const Landing_page = (props) => {
             </Stack>
           </Stack>
 
-          <Stack
-            direction={{ xs: "row", sm: "row", md: "row" }}
-            sx={{ bgcolor: "", marginTop: "62px" }}
-          >
-            <Grid2
-              sx={{ width: "87%" }}
+          <Stack sx={{ bgcolor: "", marginTop: "62px" }}>
+            <Grid
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+              gap="30px"
+              sx={{
+                bgcolor: "",
+              }}
               container
-              spacing={{ xs: 2, md: 4 }}
+              // spacing={2}
               columns={{ xs: 4, sm: 8, md: 12 }}
               xs={5}
               sm={4}
               md={20}
             >
               {ServiceCard.map((i, index) => (
-                <Grid2 xs={5} sm={5} md={4} key={index}>
+                <Grid xs={5} sm={5} md={3.76} key={index}>
                   <Service_card {...i} />
-                </Grid2>
+                </Grid>
               ))}
-            </Grid2>
+            </Grid>
           </Stack>
         </Container>
       </Container>
@@ -430,19 +434,65 @@ const Landing_page = (props) => {
         </Container>
       </Container>
 
-      <Container>
-        <Stack>
+      <Container
+        disableGutters
+        sx={{
+          width: {
+            xs: "85%",
+            sm: "85%",
+            md: "84%",
+            lg: "83",
+            xl: "85",
+          },
+          padding:"100px 0px",
+          display: "flex",
+          justifyContent:"space-between",
+          // bgcolor: "red",
+        }}
+      >
+        <Stack sx={{ width: "48%" }} spacing={4}>
           <Stack>
-            <Typography></Typography>
-            <Typography></Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 700,
+                color: "#03BFCB",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              EXCLUSIVE BENEFITS
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 900,
+                color: "rgb(0, 71, 103)",
+                lineHeight: "40px",
+                fontSize: "28px",
+              }}
+            >
+              You should choose us
+            </Typography>
           </Stack>
-          <Typography></Typography>
-          <Accordion_comp />
-          <Accordion_comp />
+
+          <Typography
+            variant="p"
+            sx={{
+              fontWeight: 500,
+              color: "rgb(64, 77, 96)",
+              lineHeight: "30px",
+              fontSize: "14px",
+            }}
+          >
+            Lorem ipsum dolor sit amet consecteture Duis aute irure dolor
+            innocente reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla.
+          </Typography>
           <Accordion_comp />
         </Stack>
-        <Stack>
-          <img src="" />
+        <Stack sx={{ width: "48.8%", alignSelf: "center" ,bgcolor:"" , objectFit:"cover"}}>
+          <img src={box_3} style={{width:"100%"}} />
         </Stack>
       </Container>
     </Container>

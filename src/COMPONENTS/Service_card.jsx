@@ -22,7 +22,7 @@ const Service_card = (props) => {
         component="img"
         height="43.5%"
         width="100%"
-        image={props.image}
+        image={props?.image}
         alt="Service image"
         objectFit="fit"
       />
@@ -46,10 +46,10 @@ const Service_card = (props) => {
             lineHeight: "35px",
           }}
         >
-          {props.text1}
+          {props?.text1}
         </Typography>
         <Stack direction="row">
-          {props.arr.map((i) => (
+          {props?.arr?.map((i) => (
             <Stack
               // width="30%"
               borderLeft={i.border && "1px solid grey"}
@@ -93,7 +93,7 @@ const Service_card = (props) => {
             lineHeight: "30px",
           }}
         >
-          {props.text2}
+          {props?.text2}
         </Typography>
       </CardContent>
     </Card>
