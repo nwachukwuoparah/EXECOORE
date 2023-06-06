@@ -1,7 +1,10 @@
-import { Container, Stack } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Header_select from "../COMPONENTS/Header_select";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Logo from "./image/logo.svg";
+import EN from "./image/en.png";
 const Header = (props) => {
   const [scroll, setScroll] = useState(false);
   const [drop, setDrop] = useState(false);
@@ -55,8 +58,6 @@ const Header = (props) => {
         scroll
           ? {
               bgcolor: "#004767",
-              display: "flex",
-              alignItems: "center",
               position: "fixed",
               width: "100%",
               top: drop ? "0px" : "-150px",
@@ -65,45 +66,111 @@ const Header = (props) => {
             }
           : {
               bgcolor: "#004767",
-              display: "flex",
               position: "fixed",
               top: "0px",
-              alignItems: "center",
               width: "100%",
               right: "0px",
               zIndex: 1000,
-              // transition: "ease-in 6s",
             }
       }
     >
       <Container
         sx={{
-          // bgcolor: "red",
+          display: scroll ? "none" : "flex",
+          alignItems: "center",
           width: "84%",
-          height: "100%",
+          justifyContent: "space-between",
+          height: "100px",
+          // bgcolor:"grey"
         }}
-        disableGutters={true}
+        disableGutters
       >
-        <Container
-          sx={{
-            display: scroll ? "none" : "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            // bgcolor: "red",
-            width: "100%",
-            height: "100px",
-            borderBottom: "1px solid #f8f8f8",
-          }}
-          disableGutters={true}
-        ></Container>
+        {" "}
+        <img style={{ width: "21.9%" }} src={Logo} alt="logo" />
+        <Stack
+          direction="row"
+          alignItems="center"
+          spacing={5.5}
+          sx={{ color: "white" }}
+          // bgcolor="red"
+        >
+          <Stack
+            sx={{
+              borderRight: "1px solid #fff",
+              paddingRight: "45px",
+              // bgcolor: "grey",
+              justifyContent: "flex-end",
+              textAlign: "right",
+              fontSize: "12px",
+              lineHeight: "21px",
+            }}
+          >
+            139 Baker Street
+            <br /> London, United Kingdom
+          </Stack>
 
+          <ShoppingCartIcon
+            style={{
+              fontSize: "22px",
+              height: "50px",
+              lineHeight: "65px",
+              cursor: "pointer",
+              display: "block",
+              textAlign: "center",
+            }}
+          />
+
+          <SearchOutlinedIcon
+            style={{
+              fontSize: "22px",
+              height: "50px",
+              lineHeight: "65px",
+              cursor: "pointer",
+              display: "block",
+              textAlign: "center",
+            }}
+          />
+
+          <Stack
+            // bgcolor="grey"
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            height="65px"
+          >
+            <img
+              style={{
+                maxWidth: "100%",
+                display: "inlineBlock",
+                borderRadius: "2px",
+              }}
+              src={EN}
+            />
+
+            <Typography
+              sx={{ lineHeight: "30px", fontSize: "14px", fontWeight: 500 }}
+            >
+              EN
+            </Typography>
+          </Stack>
+        </Stack>
+      </Container>
+
+      <Container
+        sx={{
+          width: "100%",
+          height: "100%",
+          borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+        }}
+        disableGutters
+        maxWidth={false}
+      >
         <Container
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            // bgcolor: "red",
-            width: "100%",
+            width: "84%",
             height: "100%",
           }}
           disableGutters={true}
@@ -120,7 +187,17 @@ const Header = (props) => {
               <Header_select drop={drop} {...i} />
             ))}
           </Stack>
-          <SearchOutlinedIcon sx={{ color: "white" }} />
+          <Typography
+            sx={{
+              color: "#f8f8f8",
+              "&:after": {
+                content: '" (023) 112 589 "',
+                color: "#03BFCB",
+              },
+            }}
+          >
+            CALL US:
+          </Typography>
         </Container>
       </Container>
     </Container>

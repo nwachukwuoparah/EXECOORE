@@ -17,7 +17,7 @@ const Header_select = (props) => {
       {props.list && hover && (
         <Stack
           position="absolute"
-          top={props.drop ? "57.5px" : "75px"}
+          top={props.drop ? "50px" : "150px"}
           width="18%"
           bgcolor="#f8f8f8"
           borderTop="2px solid #02bfcb"

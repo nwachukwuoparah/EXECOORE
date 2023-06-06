@@ -131,19 +131,18 @@ const Landing_page = (props) => {
       >
         <Stack
           direction={{ xs: "row", sm: "row", md: "row" }}
-          sx={{ bgcolor: "", height: "235px" }}
+          sx={{ bgcolor: "", height: "235px", bgcolor: "" }}
         >
           <Grid
-            sx={{ width: "87%" }}
+            sx={{ width: "84%", justifyContent: "space-between" }}
             container
-            spacing={{ xs: 2, md: 4 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
             xs={5}
             sm={4}
             md={20}
           >
             {[1, 2, 3, 4].map((_, index) => (
-              <Grid xs={5} sm={4} md={3} key={index}>
+              <Grid xs={5} sm={4} md={2.72} key={index}>
                 <About_card />
               </Grid>
             ))}
@@ -444,9 +443,9 @@ const Landing_page = (props) => {
             lg: "83",
             xl: "85",
           },
-          padding:"100px 0px",
+          padding: "100px 0px",
           display: "flex",
-          justifyContent:"space-between",
+          justifyContent: "space-between",
           // bgcolor: "red",
         }}
       >
@@ -491,10 +490,24 @@ const Landing_page = (props) => {
           </Typography>
           <Accordion_comp />
         </Stack>
-        <Stack sx={{ width: "48.8%", alignSelf: "center" ,bgcolor:"" , objectFit:"cover"}}>
-          <img src={box_3} style={{width:"100%"}} />
+        <Stack
+          sx={{
+            width: "48.8%",
+            alignSelf: "center",
+            bgcolor: "",
+            objectFit: "cover",
+          }}
+        >
+          <img src={box_3} style={{ width: "100%" }} />
         </Stack>
       </Container>
+
+
+
+
+
+
+      
     </Container>
   );
 };
