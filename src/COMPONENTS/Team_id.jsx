@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import React from "react";
 
-const Team = (props) => {
+const Team_id = (props) => {
   return (
     <Stack sx={{ bgcolor: "grey", width: "25%" }}>
       <img className="" src={""} alt="image" />
@@ -10,4 +10,4 @@ const Team = (props) => {
   );
 };
 
-export default Team;
+export default Team_id;

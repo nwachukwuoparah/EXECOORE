@@ -25,7 +25,7 @@ import Contact_form from "../COMPONENTS/Contact_form";
 import Testmonial_card from "../COMPONENTS/TESTIMONIAL/Testmonials_card";
 import Accordion_comp from "../COMPONENTS/Accordion_comp";
 import Counter from "./Counter";
-import Team from "../COMPONENTS/team";
+import Team_id from "../COMPONENTS/Team_id";
 
 const Landing_page = (props) => {
   const [scroll, setScroll] = useState();
@@ -721,6 +721,9 @@ const Landing_page = (props) => {
               View the team
             </Typography>
           </Stack>
+          <Team />
+          <Team />
+          <Team />
           <Team />
         </Stack>
       </Container>
