@@ -721,10 +721,10 @@ const Landing_page = (props) => {
               View the team
             </Typography>
           </Stack>
-          <Team />
-          <Team />
-          <Team />
-          <Team />
+          <Team_id />
+          <Team_id />
+          <Team_id />
+          <Team_id />
         </Stack>
       </Container>
     </Container>
