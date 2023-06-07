@@ -4,7 +4,7 @@ import React from "react";
 const Team = (props) => {
   return (
     <Stack sx={{ bgcolor: "grey", width: "25%" }}>
-      <img className="benefit_img" src={""} alt="image" />
+      <img className="" src={""} alt="image" />
       <Stack>image</Stack>
     </Stack>
   );
