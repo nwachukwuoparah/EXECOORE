@@ -138,7 +138,7 @@ const Landing_page = (props) => {
       >
         <Stack
           direction={{ xs: "row", sm: "row", md: "row" }}
-          sx={{ bgcolor: "", height: "235px", bgcolor: "" }}
+          sx={{ bgcolor: "", height: "235px" }}
         >
           <Grid
             sx={{ width: "84%", justifyContent: "space-between" }}

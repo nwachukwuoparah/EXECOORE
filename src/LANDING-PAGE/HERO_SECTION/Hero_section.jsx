@@ -64,8 +64,6 @@ const Hero_section = (props) => {
               fontSize: "14px",
               color: "rgb(64, 77, 96)",
               lineHeight: "30px",
-              fontSize: "14px",
-              fontWeight: 500,
               // width:"500px"
             }}
           >
