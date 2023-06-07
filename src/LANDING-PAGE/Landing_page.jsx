@@ -671,7 +671,7 @@ const Landing_page = (props) => {
             },
           ]}
         />
-        <Stack sx={{ bgcolor: ""}} direction="row">
+        <Stack sx={{ bgcolor: "" }} direction="row">
           <Stack sx={{ bgcolor: "", width: "25%" }}>
             <span>
               <Typography
@@ -699,7 +699,7 @@ const Landing_page = (props) => {
               sx={{
                 fontWeight: 500,
                 color: "rgb(64, 77, 96)",
-              
+
                 fontSize: "14px",
                 lineHeight: "30px",
               }}
@@ -721,8 +721,6 @@ const Landing_page = (props) => {
               View the team
             </Typography>
           </Stack>
-          <Team />
-          <Team />
           <Team />
         </Stack>
       </Container>
