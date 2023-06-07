@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./landing_page.css";
-import { Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Hero_section from "./HERO_SECTION/Hero_section";
 import About_card from "../COMPONENTS/About-page_card";
@@ -14,11 +14,18 @@ import logo_4 from "./Images/logo-4.png";
 import logo_5 from "./Images/logo-5.png";
 import logo_6 from "./Images/logo-6.png";
 import box_3 from "./Images/box-3.png";
+import box_4 from "./Images/box-4.png";
+import ui_1 from "./Images/ui-1.jpeg";
+import ui_2 from "./Images/ui-2.jpeg";
+import ui_3 from "./Images/ui-3.jpeg";
+import ui_4 from "./Images/ui-4.jpeg";
 import Service_card from "../COMPONENTS/Service_card";
 import { Parallax } from "react-parallax";
 import Contact_form from "../COMPONENTS/Contact_form";
 import Testmonial_card from "../COMPONENTS/TESTIMONIAL/Testmonials_card";
 import Accordion_comp from "../COMPONENTS/Accordion_comp";
+import Counter from "./Counter";
+import Team from "../COMPONENTS/team";
 
 const Landing_page = (props) => {
   const [scroll, setScroll] = useState();
@@ -502,12 +509,223 @@ const Landing_page = (props) => {
         </Stack>
       </Container>
 
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          bgcolor: "rgb(228, 237, 243)",
+          padding: "99px 0px 174px 0px",
+        }}
+      >
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          sx={{
+            width: {
+              xs: "85%",
+              sm: "85%",
+              md: "84%",
+              lg: "83",
+              xl: "85",
+            },
+            // bgcolor: "greenyellow",
+          }}
+        >
+          <Stack
+            sx={{
+              width: {
+                xs: "85%",
+                sm: "85%",
+                md: "48.6%",
+                lg: "83",
+                xl: "85",
+              },
+              // bgcolor: "grey",
+              objectFit: "contain",
+              // alignItems: "flex-end",
+            }}
+          >
+            <img src={box_4} />
+          </Stack>
 
-
-
-
-
-      
+          <Stack
+            sx={{
+              width: {
+                xs: "85%",
+                sm: "85%",
+                md: "48.5%",
+                lg: "83",
+                xl: "85",
+              },
+              // bgcolor: "blue",
+              paddingTop: "2px",
+            }}
+            spacing={4}
+          >
+            <span>
+              <Typography
+                sx={{
+                  fontWeight: 700,
+                  color: "#03BFCB",
+                  lineHeight: "30px",
+                  fontSize: "14px",
+                }}
+              >
+                EXCLUSIVE BENEFITS
+              </Typography>
+              <Typography
+                sx={{
+                  fontWeight: 900,
+                  color: "rgb(0, 71, 103)",
+                  lineHeight: "40px",
+                  fontSize: "28px",
+                }}
+              >
+                You should choose us
+              </Typography>
+            </span>
+            <Typography
+              sx={{
+                fontWeight: 500,
+                color: "rgb(64, 77, 96)",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              Lorem ipsum dolor sit amet consecteture Duis aute irure dolor
+              innocente reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla.
+            </Typography>
+            <Stack direction="row" justifyContent="space-between">
+              <Box sx={{ width: "22.5%" }}>
+                <img className="benefit_img" src={ui_1} />
+              </Box>
+              <Box sx={{ width: "22.5%" }}>
+                <img className="benefit_img" src={ui_2} />
+              </Box>
+              <Box sx={{ width: "22.5%" }}>
+                <img className="benefit_img" src={ui_3} />
+              </Box>
+              <Box sx={{ width: "22.5%" }}>
+                <img className="benefit_img" src={ui_4} />
+              </Box>
+            </Stack>
+            <Typography
+              sx={{
+                fontWeight: 600,
+                color: "rgb(64, 77, 96)",
+                lineHeight: "30px",
+                fontSize: "14px",
+              }}
+            >
+              View services
+            </Typography>
+          </Stack>
+        </Stack>
+      </Container>
+      <Container
+        disableGutters={true}
+        maxWidth={false}
+        sx={{
+          width: {
+            xs: "85%",
+            sm: "85%",
+            md: "84.5%",
+            lg: "83",
+            xl: "85",
+          },
+          // bgcolor: "greenyellow",
+          height: "92.5vh",
+        }}
+      >
+        <Counter
+          arr={[
+            {
+              title: "COUNTRIES",
+              number: 47,
+              time: "100",
+              width: 287,
+              padding: true,
+            },
+            {
+              title: "COUNTRIES",
+              number: 110,
+              time: "10",
+              width: 254,
+              padding: true,
+            },
+            {
+              title: "COUNTRIES",
+              number: 250,
+              time: "4",
+              width: 255,
+              padding: true,
+            },
+            {
+              title: "COUNTRIES",
+              number: 30,
+              time: "150",
+              width: 255,
+            },
+          ]}
+        />
+        <Stack sx={{ bgcolor: ""}} direction="row">
+          <Stack sx={{ bgcolor: "", width: "25%" }}>
+            <span>
+              <Typography
+                sx={{
+                  fontWeight: 700,
+                  color: "#03BFCB",
+                  fontSize: "14px",
+                  lineHeight: "30px",
+                }}
+              >
+                OUR TEAM
+              </Typography>
+              <Typography
+                sx={{
+                  fontWeight: 900,
+                  color: "rgb(0, 71, 103)",
+                  fontSize: "28px",
+                  lineHeight: "40px",
+                }}
+              >
+                The big family
+              </Typography>
+            </span>
+            <Typography
+              sx={{
+                fontWeight: 500,
+                color: "rgb(64, 77, 96)",
+              
+                fontSize: "14px",
+                lineHeight: "30px",
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipiscing elitsed do
+              eiusmod tempor incididu.
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 600,
+                color: "rgb(64, 77, 96)",
+                fontSize: "14px",
+                lineHeight: "30px",
+                "&:hover": {
+                  color: "#03BFCB",
+                },
+              }}
+            >
+              View the team
+            </Typography>
+          </Stack>
+          <Team />
+          <Team />
+          <Team />
+        </Stack>
+      </Container>
     </Container>
   );
 };

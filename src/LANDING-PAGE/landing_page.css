@@ -27,26 +27,6 @@
   background-color: #fff;
 }
 
-/* .Parallax_link:before {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  top: 65px;
-  left: 50.4%;
-  transform: translateX(-10%);
-  margin-left: -43px;
-  background: #fff;
-  z-index: 1;
-  animation: ping 0.8s ease-in infinite both;
-} */
-
-
-
-
-
-
 .paralax_text {
   position: relative;
   z-index: 9;
@@ -61,4 +41,8 @@
   border-radius: 3px;
   z-index: -1;
   background-color: #03bfcb;
+}
+
+.benefit_img {
+  width: 100%;
 }
