@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-
+import { MdKeyboardArrowDown } from "react-icons/md";
 const Header_select = (props) => {
   const [hover, setHover] = useState(false);
 
@@ -12,8 +12,15 @@ const Header_select = (props) => {
       sx={{ cursor: "pointer", "&:hover": { color: "#02bfcb" } }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      spacing={1.4}
+     
     >
-      <Stack>{props.title}</Stack>
+      <Typography
+        sx={{ fontWeight: 700, fontSize: "13px", lineHeight: "50px", letterSpacing:"1px"}}
+      >
+        {props.title}
+      </Typography>
+      <MdKeyboardArrowDown />
       {props.list && hover && (
         <Stack
           position="absolute"
@@ -27,6 +34,7 @@ const Header_select = (props) => {
             <Typography
               sx={{
                 padding: "10px",
+
                 "&:hover": {
                   backgroundColor: " #02bfcb",
                   color: "white",

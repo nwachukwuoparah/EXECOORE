@@ -9,9 +9,13 @@
 }
 
 .image {
-  width: 94%;
+  width: 95%;
+  /* object-fit: fill; */
+  position: relative;
+  top: 10px;
+  left: 2px;
 }
 
-.slider{
+.slider {
   overflow: hidden;
 }

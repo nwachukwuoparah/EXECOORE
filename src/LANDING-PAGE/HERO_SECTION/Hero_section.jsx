@@ -6,9 +6,8 @@ import Image from ".././Images/man-3.png";
 import "animate.css";
 
 const Hero_section = (props) => {
-
   return (
-    <section style={{ marginTop: "145px" }}  className="hero_section">
+    <section style={{ marginTop: "149px" }} className="hero_section">
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -16,7 +15,7 @@ const Hero_section = (props) => {
           width: {
             xs: "85%",
             sm: "85%",
-            md: "84%",
+            md: "84.3%",
             // lg: "83",
             // xl: "85",
           },
@@ -51,9 +50,11 @@ const Hero_section = (props) => {
                 lineHeight: "65px",
                 fontSize: "45px",
                 color: "rgb(0, 71, 103)",
+                letterSpacing: "2px",
               }}
             >
-              HARDWARETO POWER YOUR BUSINESS
+              HARDWARE TO POWER
+              <br /> YOUR BUSINESS
             </Typography>
           </div>
 
@@ -71,20 +72,23 @@ const Hero_section = (props) => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariature irure dolore.
           </Typography>
-          <Stack direction="row" spacing={2} sx={{ paddingTop: "6px" }}>
+          <Stack direction="row" spacing={2.5} sx={{ paddingTop: "6px" }}>
             <Button
               variant="contained"
               disableElevation
               sx={{
+                padding: "5px 27px",
+                height:"52.5px",
+                fontSize: "15px",
+                fontWeight: 600,
+                bgcolor:"#03BFCB",
+                borderRadius:"3px",
+                lineHeight:"30px",
                 color: "#fff",
-                borderRadius: "3px",
                 cursor: "pointer",
                 textAlign: "center",
                 transition: "all .5s",
                 minWidth: "190px",
-                padding: "13px 18px",
-                fontSize: "15px",
-                bgcolor: "#03BFCB",
                 "&:hover": {
                   transform: "Scale(0.95)",
                   bgcolor: "#004767",
@@ -98,16 +102,21 @@ const Hero_section = (props) => {
               disableElevation
               sx={{
                 color: "#004767",
-                borderRadius: "3px",
                 borderColor: "#004767",
+                padding: "5px 27px",
+                height:"52.5px",
+                fontSize: "15px",
+                fontWeight: 600,
+                borderRadius:"3px",
+                lineHeight:"30px",
                 cursor: "pointer",
                 textAlign: "center",
                 transition: "all .5s",
                 minWidth: "190px",
-                padding: "13px 18px",
-                fontSize: "15px",
+
                 "&:hover": {
                   transform: "Scale(0.95)",
+                  borderColor: "#004767",
                 },
               }}
             >
@@ -117,13 +126,14 @@ const Hero_section = (props) => {
         </Stack>
         <Stack
           sx={{
-            width: "41.7%",
+            width: "42.8%",
             // height: "100%",
-            objectFit: "cover",
+            // objectFit: "cover",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "flex-end",
             marginTop: "15px",
+            // bgcolor:"red"
           }}
         >
           <img src={Image} className="image" />

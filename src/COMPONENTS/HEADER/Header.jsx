@@ -63,6 +63,7 @@ const Header = (props) => {
               top: drop ? "0px" : "-150px",
               zIndex: 1000,
               transition: drop ? "ease-in-out 2s" : null,
+              fontWeight:900
             }
           : {
               bgcolor: "#004767",
@@ -71,6 +72,7 @@ const Header = (props) => {
               width: "100%",
               right: "0px",
               zIndex: 1000,
+              fontWeight:900
             }
       }
     >
@@ -78,7 +80,7 @@ const Header = (props) => {
         sx={{
           display: scroll ? "none" : "flex",
           alignItems: "center",
-          width: "84%",
+          width: "84.4%",
           justifyContent: "space-between",
           height: "100px",
           // bgcolor:"grey"
@@ -132,7 +134,6 @@ const Header = (props) => {
           />
 
           <Stack
-            // bgcolor="grey"
             direction="row"
             spacing={1}
             alignItems="center"
@@ -171,17 +172,17 @@ const Header = (props) => {
             alignItems: "center",
             justifyContent: "space-between",
             width: "84%",
-            height: "100%",
           }}
           disableGutters={true}
         >
           <Stack
             direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-            height="50px"
+            // alignItems="center"
+            height="18px"
             color="white"
-            sx={{ width: "45%" }}
+            sx={{ width: "49%" }}
+            spacing={3.1}
+            // bgcolor="red"
           >
             {MENU?.map((i) => (
               <Header_select drop={drop} {...i} />
@@ -189,6 +190,10 @@ const Header = (props) => {
           </Stack>
           <Typography
             sx={{
+              fontWeight: 900,
+              fontSize: "13px",
+              lineHeight: "50px",
+              letterSpacing: ".6px",
               color: "#f8f8f8",
               "&:after": {
                 content: '" (023) 112 589 "',
