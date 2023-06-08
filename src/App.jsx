@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./HEADER/Header";
+import Header from "./COMPONENTS/HEADER/Header";
+import Footer from "./COMPONENTS/FOOTER/Footer";
 import Landing_page from "./LANDING-PAGE/Landing_page";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing_page />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

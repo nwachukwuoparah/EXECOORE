@@ -1,6 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Header_select from "../COMPONENTS/Header_select";
+import Header_select from "../Header_select";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Logo from "./image/logo.svg";

@@ -19,6 +19,9 @@ import ui_1 from "./Images/ui-1.jpeg";
 import ui_2 from "./Images/ui-2.jpeg";
 import ui_3 from "./Images/ui-3.jpeg";
 import ui_4 from "./Images/ui-4.jpeg";
+import user_1 from "./Images/user-1.jpeg";
+import user_9 from "./Images/user-9.jpeg";
+import user_3 from "./Images/user-3.jpeg";
 import Service_card from "../COMPONENTS/Service_card";
 import { Parallax } from "react-parallax";
 import Contact_form from "../COMPONENTS/Contact_form";
@@ -671,8 +674,8 @@ const Landing_page = (props) => {
             },
           ]}
         />
-        <Stack sx={{ bgcolor: "" }} direction="row">
-          <Stack sx={{ bgcolor: "", width: "25%" }}>
+        <Stack direction="row" spacing={1}>
+          <Stack sx={{ width: "25%" }} spacing={3.7}>
             <span>
               <Typography
                 sx={{
@@ -721,10 +724,9 @@ const Landing_page = (props) => {
               View the team
             </Typography>
           </Stack>
-          <Team_id />
-          <Team_id />
-          <Team_id />
-          <Team_id />
+          <Team_id image={user_1} />
+          <Team_id image={user_9} />
+          <Team_id image={user_3} />
         </Stack>
       </Container>
     </Container>
