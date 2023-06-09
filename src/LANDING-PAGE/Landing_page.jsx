@@ -119,7 +119,7 @@ const Landing_page = (props) => {
       disableGutters={true}
       maxWidth="100%"
       sx={{
-        height: "805vh",
+        // height: "805vh",
         // overflow: "hidden",
       }}
     >
@@ -640,7 +640,7 @@ const Landing_page = (props) => {
             xl: "85",
           },
           // bgcolor: "greenyellow",
-          height: "92.5vh",
+          height: "88.2vh",
         }}
       >
         <Counter
@@ -674,7 +674,8 @@ const Landing_page = (props) => {
             },
           ]}
         />
-        <Stack direction="row" spacing={1}>
+
+        <Stack direction="row" justifyContent="" bgcolor="">
           <Stack sx={{ width: "25%" }} spacing={3.7}>
             <span>
               <Typography
