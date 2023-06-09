@@ -8,9 +8,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Landing_page />} />
+        {/* <Route path="/" element={<Landing_page />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

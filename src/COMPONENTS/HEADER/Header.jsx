@@ -5,7 +5,16 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Logo from "./image/logo.svg";
 import EN from "./image/en.png";
+import { FiMenu } from "react-icons/fi";
 const Header = (props) => {
+  {
+    /* xs: 0,
+  sm: 600,
+  md: 900,
+  lg: 1200,
+  xl: 1536, */
+  }
+
   const [scroll, setScroll] = useState(false);
   const [drop, setDrop] = useState(false);
   useEffect(() => {
@@ -63,16 +72,15 @@ const Header = (props) => {
               top: drop ? "0px" : "-150px",
               zIndex: 1000,
               transition: drop ? "ease-in-out 2s" : null,
-              fontWeight:900
+              fontWeight: 900,
             }
           : {
               bgcolor: "#004767",
               position: "fixed",
               top: "0px",
               width: "100%",
-              right: "0px",
               zIndex: 1000,
-              fontWeight:900
+              fontWeight: 900,
             }
       }
     >
@@ -82,18 +90,19 @@ const Header = (props) => {
           alignItems: "center",
           width: "84.4%",
           justifyContent: "space-between",
-          height: "100px",
+          height: { xs: "65px", md: "100px" },
           // bgcolor:"grey"
         }}
         disableGutters
       >
         {" "}
         <img style={{ width: "21.9%" }} src={Logo} alt="logo" />
+        <FiMenu />
         <Stack
           direction="row"
           alignItems="center"
           spacing={5.5}
-          sx={{ color: "white" }}
+          sx={{ color: "white", display: { xs: "none", md: "flex" } }}
           // bgcolor="red"
         >
           <Stack
@@ -133,12 +142,7 @@ const Header = (props) => {
             }}
           />
 
-          <Stack
-            direction="row"
-            spacing={1}
-            alignItems="center"
-            height="65px"
-          >
+          <Stack direction="row" spacing={1} alignItems="center" height="65px">
             <img
               style={{
                 maxWidth: "100%",
@@ -162,6 +166,7 @@ const Header = (props) => {
           width: "100%",
           height: "100%",
           borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+          display: { xs: "none", md: "block" },
         }}
         disableGutters
         maxWidth={false}

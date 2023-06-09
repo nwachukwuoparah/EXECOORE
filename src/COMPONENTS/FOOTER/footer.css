@@ -1,0 +1,42 @@
+.resource {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0px;
+  cursor: pointer;
+}
+
+.resource_icon {
+  position: relative;
+  right: 5px;
+  transition: ease-in-out 0.5s;
+  font-size: 20px;
+  color: #03bfcb;
+}
+
+.resource:hover .resource_icon {
+  transform: translateX(50%);
+}
+
+.hr {
+  height: 1px;
+  border: none;
+  margin: 30px 0;
+  color: #03bfcb;
+  margin-top: 19px;
+  border-top: 1px dotted;
+  background: none;
+  opacity: 0.8;
+  align-self: flex-end;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+}
+
+.adress{
+    display: flex;
+}
