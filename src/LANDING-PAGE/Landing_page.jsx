@@ -119,45 +119,38 @@ const Landing_page = (props) => {
       disableGutters={true}
       maxWidth="100%"
       sx={{
-        // height: "805vh",
+        height: "805vh",
         // overflow: "hidden",
       }}
     >
       <Hero_section />
+
       <Container
         disableGutters={true}
         maxWidth={false}
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "84%",
             lg: "83",
             xl: "85",
           },
-          // bgcolor: "greenyellow",
-          height: "92.5vh",
+          // height: { xs: "auto", md: "92.5vh" },
         }}
       >
-        <Stack
-          direction={{ xs: "row", sm: "row", md: "row" }}
-          sx={{ bgcolor: "", height: "235px" }}
+        <Grid
+          container
+          columns={20}
+          justifyContent="space-between"
+          gap={{ xs: "30px", md: "0px" }}
         >
-          <Grid
-            sx={{ width: "84%", justifyContent: "space-between" }}
-            container
-            columns={{ xs: 4, sm: 8, md: 12 }}
-            xs={5}
-            sm={4}
-            md={20}
-          >
-            {[1, 2, 3, 4].map((_, index) => (
-              <Grid xs={5} sm={4} md={2.72} key={index}>
-                <About_card />
-              </Grid>
-            ))}
-          </Grid>
-        </Stack>
+          {[1, 2, 3, 4].map((_, index) => (
+            <Grid item md={4.6} xs={20} key={index} bgcolor="">
+              <About_card />
+            </Grid>
+          ))}
+        </Grid>
 
         <About_component
           image={image_16}
@@ -171,7 +164,7 @@ const Landing_page = (props) => {
         />
       </Container>
 
-      <Container
+      {/*  <Container
         disableGutters={true}
         maxWidth={false}
         sx={{ backgroundColor: "rgb(228, 237, 243)", padding: "100px 0px" }}
@@ -729,7 +722,7 @@ const Landing_page = (props) => {
           <Team_id image={user_9} />
           <Team_id image={user_3} />
         </Stack>
-      </Container>
+      </Container> */}
     </Container>
   );
 };

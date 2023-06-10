@@ -1,4 +1,5 @@
 import { Container, Stack, Typography } from "@mui/material";
+import "./header.css";
 import React, { useEffect, useState } from "react";
 import Header_select from "../Header_select";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -7,13 +8,13 @@ import Logo from "./image/logo.svg";
 import EN from "./image/en.png";
 import { FiMenu } from "react-icons/fi";
 const Header = (props) => {
-  {
-    /* xs: 0,
+  // {
+  /* xs: 0,
   sm: 600,
   md: 900,
   lg: 1200,
   xl: 1536, */
-  }
+  // }
 
   const [scroll, setScroll] = useState(false);
   const [drop, setDrop] = useState(false);
@@ -67,7 +68,7 @@ const Header = (props) => {
         scroll
           ? {
               bgcolor: "#004767",
-              position: "fixed",
+              position: { md: "fixed", xs: "relative" },
               width: "100%",
               top: drop ? "0px" : "-150px",
               zIndex: 1000,
@@ -76,7 +77,7 @@ const Header = (props) => {
             }
           : {
               bgcolor: "#004767",
-              position: "fixed",
+              position: { md: "fixed", xs: "relative" },
               top: "0px",
               width: "100%",
               zIndex: 1000,
@@ -84,20 +85,22 @@ const Header = (props) => {
             }
       }
     >
+
+
       <Container
         sx={{
           display: scroll ? "none" : "flex",
           alignItems: "center",
-          width: "84.4%",
+          width: { xs: "81%", sm: "92%", md: "84.4%" },
           justifyContent: "space-between",
           height: { xs: "65px", md: "100px" },
-          // bgcolor:"grey"
+          bgcolor: { sm: "grey" },
         }}
         disableGutters
+
       >
-        {" "}
-        <img style={{ width: "21.9%" }} src={Logo} alt="logo" />
-        <FiMenu />
+        <img className="header_image" src={Logo} alt="logo" />
+        <FiMenu className="header_menu" />
         <Stack
           direction="row"
           alignItems="center"

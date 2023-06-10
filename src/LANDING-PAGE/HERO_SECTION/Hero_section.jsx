@@ -7,13 +7,13 @@ import "animate.css";
 
 const Hero_section = (props) => {
   return (
-    <section style={{ marginTop: "149px" }} className="hero_section">
+    <section className="hero_section">
       <Container
         disableGutters={true}
         maxWidth={false}
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "84.3%",
             // lg: "83",
@@ -26,8 +26,8 @@ const Hero_section = (props) => {
       >
         <Stack
           sx={{
-            width: "58.3%",
-            // bgcolor: "#f8f8f8",
+            width: { xs: "100%", md: "58.3%" },
+            // bgcolor: { xs: "#f8f8f8" },
             marginTop: "100px",
           }}
           spacing={4}
@@ -36,7 +36,8 @@ const Hero_section = (props) => {
             variant="h6"
             sx={{
               fontWeight: 900,
-              fontSize: " 21px",
+              fontSize: { md: "21px", xs: "18px" },
+              lineHeight: { md: "", xs: "30px" },
               color: " #03BFCB",
             }}
           >
@@ -47,14 +48,15 @@ const Hero_section = (props) => {
               variant="h2"
               sx={{
                 fontWeight: 900,
-                lineHeight: "65px",
-                fontSize: "45px",
+                lineHeight: { xs: "45px", md: "65px" },
+                fontSize: { xs: "33px", md: "45px" },
                 color: "rgb(0, 71, 103)",
                 letterSpacing: "2px",
               }}
             >
               HARDWARE TO POWER
-              <br /> YOUR BUSINESS
+              <br />
+              YOUR BUSINESS
             </Typography>
           </div>
 
@@ -62,28 +64,42 @@ const Hero_section = (props) => {
             variant="body1"
             sx={{
               fontWeight: 500,
-              fontSize: "14px",
+              fontSize: { xs: "13px", md: "14px" },
               color: "rgb(64, 77, 96)",
               lineHeight: "30px",
-              // width:"500px"
+              // bgcolor: "red",
+              paddingTop: "10.5px",
             }}
           >
             Try now our free trial membership. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariature irure dolore.
           </Typography>
-          <Stack direction="row" spacing={2.5} sx={{ paddingTop: "6px" }}>
+
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            spacing={{ xs: 2, md: 2.5 }}
+            sx={{
+              paddingTop: "6px",
+              flexWrap: {
+                xs: "wrap",
+                md: "non-wrap",
+                justifyContent: { xs: "center" },
+              },
+              // bgcolor: "red",
+            }}
+          >
             <Button
               variant="contained"
               disableElevation
               sx={{
-                padding: "5px 27px",
-                height:"52.5px",
-                fontSize: "15px",
+                padding: { xs: "5px 20px", md: "5px 27px" },
+                height: { xs: "auto", md: "52.5px" },
+                fontSize: { xs: "14px", md: "15px" },
                 fontWeight: 600,
-                bgcolor:"#03BFCB",
-                borderRadius:"3px",
-                lineHeight:"30px",
+                bgcolor: "#03BFCB",
+                borderRadius: "3px",
+                lineHeight: "30px",
                 color: "#fff",
                 cursor: "pointer",
                 textAlign: "center",
@@ -103,12 +119,12 @@ const Hero_section = (props) => {
               sx={{
                 color: "#004767",
                 borderColor: "#004767",
-                padding: "5px 27px",
-                height:"52.5px",
-                fontSize: "15px",
+                padding: { xs: "5px 20px", md: "5px 27px" },
+                height: { xs: "auto", md: "52.5px" },
+                fontSize: { xs: "14px", md: "15px" },
                 fontWeight: 600,
-                borderRadius:"3px",
-                lineHeight:"30px",
+                borderRadius: "3px",
+                lineHeight: "30px",
                 cursor: "pointer",
                 textAlign: "center",
                 transition: "all .5s",
@@ -124,12 +140,13 @@ const Hero_section = (props) => {
             </Button>
           </Stack>
         </Stack>
+
         <Stack
           sx={{
             width: "42.8%",
             // height: "100%",
             // objectFit: "cover",
-            display: "flex",
+            display: { xs: "none", md: "flex" },
             alignItems: "flex-end",
             justifyContent: "flex-end",
             marginTop: "15px",

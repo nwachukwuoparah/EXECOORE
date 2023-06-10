@@ -12,6 +12,7 @@
     opacity: 0.5;
   }
 }
+
 .Parallax_link:empty {
   width: 80px;
   height: 80px;
@@ -20,6 +21,7 @@
   cursor: pointer;
   background-color: #03bfcb;
 }
+
 .Parallax_link:empty:before {
   width: 70px;
   height: 70px;

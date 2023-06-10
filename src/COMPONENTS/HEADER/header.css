@@ -1,0 +1,19 @@
+.header_image {
+  width: 21.9%;
+  /* background-color: red; */
+}
+.header_menu {
+  display: none;
+}
+
+@media screen and (width <= 991px) {
+  .header_image {
+    width: 183.5px;
+    height: 60%;
+  }
+  .header_menu {
+    display: block;
+    font-size: 30px;
+    color: #f8f8f8;
+  }
+}

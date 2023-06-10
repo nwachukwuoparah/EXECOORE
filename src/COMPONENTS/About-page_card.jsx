@@ -11,28 +11,30 @@ const About_card = (props) => {
   return (
     <Card
       sx={{
-        maxWidth: "100%",
-        height: "250px",
+        // maxWidth: "100%",
+        height: {xs:"245px", md:"250px"},
         boxShadow: "0 1px 4px rgba(0, 0, 0, 0.15)",
         transition: "all .5s",
         position: "relative",
-        top: "-106px",
-        padding:"20px 15px 0px",
+        top: { xs: "-90px", md: "-106px" },
+        padding: "20px 15px 0px",
         "&:hover": {
-          transform: "scale(1.01)",
-          boxShadow: "0px 7px 15px rgba(0, 0, 0, 0.3)",
-          top: "-110px",
+          transform: { xs: "unset", md: "scale(1.01)" },
+          boxShadow: {
+            xs: "0 1px 4px rgba(0, 0, 0, 0.15)", 
+            md: "0px 7px 15px rgba(0, 0, 0, 0.3)",
+          },
+          top: { xs: "none", md: "-110px" },
         },
       }}
     >
-  
       <CardMedia
         component="img"
         height="40%"
         image="/static/images/cards/contemplative-reptile.jpg"
         alt="green iguana"
       />
-      <CardContent sx={{  bgcolor: "" }}>
+      <CardContent sx={{ bgcolor: "" }}>
         <Typography
           gutterBottom
           variant="h5"
@@ -58,7 +60,6 @@ const About_card = (props) => {
           Duis aute irure dolor in repreherita ineto.
         </Typography>
       </CardContent>
-
     </Card>
   );
 };
