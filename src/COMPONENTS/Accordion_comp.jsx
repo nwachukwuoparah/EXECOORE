@@ -44,7 +44,6 @@ const Accordion_comp = (props) => {
             borderBottom: "1px solid rgb(0, 71, 103)",
             padding: "10px 0px 0px 0px",
             cursor: "pointer",
-            position: "relative",
           }}
           onClick={() => handleChange(i.key)}
         >

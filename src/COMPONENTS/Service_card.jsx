@@ -11,10 +11,14 @@ const Service_card = (props) => {
         transition: "ease-out 0.5s",
         position: "relative",
         top: "0px",
+
         "&:hover": {
-          transform: "scale(1.01)",
-          boxShadow: "0px 7px 15px rgba(0, 0, 0, 0.3)",
-          top: "-5px",
+          transform: { xs: "unset", md: "scale(1.01)" },
+          boxShadow: {
+            xs: "0 1px 4px rgba(0, 0, 0, 0.15)",
+            md: "0px 7px 15px rgba(0, 0, 0, 0.3)",
+          },
+          top: { xs: "none", md: "-5px" },
         },
       }}
     >
@@ -53,7 +57,11 @@ const Service_card = (props) => {
             <Stack
               // width="30%"
               borderLeft={i.border && "1px solid grey"}
-              padding={i.border ? "0px 45px 0px 15px" : "0px 45px 0px 0px"}
+              padding={
+                i.border
+                  ? { xs: "0px 35px 0px 15px", md: "0px 45px 0px 15px" }
+                  : { xs: "0px 30px 0px 0px", md: "0px 45px 0px 0px" }
+              }
             >
               <Typography
                 variant="p"

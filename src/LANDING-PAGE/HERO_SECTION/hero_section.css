@@ -24,6 +24,6 @@
 @media screen and (width <= 599px) {
   .hero_section {
      height: 137.5vh;
-    margin-top: 0px;
+    margin-top: 65px;
   }
 }

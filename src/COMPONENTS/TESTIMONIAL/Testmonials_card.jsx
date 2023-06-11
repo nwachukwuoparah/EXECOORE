@@ -4,7 +4,10 @@ import "./testmonials_card.css";
 import image from "./user-3.jpeg";
 const Testmonial_card = (props) => {
   return (
-    <Stack sx={{ width: "337px" }} spacing={2}>
+    <Stack
+      sx={{ position: "relative", width: { xs: "100%", md: "31.5%" } }}
+      spacing={2}
+    >
       <span className="testmonial_card_text">
         If you dont suscceed at first, there's no need for the word failure.
         They somehow already know what you truly want

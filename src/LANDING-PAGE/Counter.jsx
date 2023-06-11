@@ -6,7 +6,7 @@ const Counter = ({ arr }) => {
     <Stack
       variant="span"
       // spacing={3}
-      direction="row"
+      direction={{ xs: "column", md: "row" }}
       bgcolor="rgb(255, 255, 255)"
       sx={{
         position: "relative",
@@ -22,11 +22,12 @@ const Counter = ({ arr }) => {
           direction="row"
           alignItems="center"
           spacing={2.5}
-          borderRight={i.padding && "1px solid rgb(188, 206, 216)"}
-          height="107px"
+          borderRight={
+            i.padding && { xs: "none", md: "1px solid rgb(188, 206, 216)" }
+          }
+          height={{ xs: "76px", md: "107px" }}
           width={i.width}
-          padding="20px 0px 20px 31px"
-          // bgcolor="grey"
+          padding={{ xs: "0px 0px 0px 31px", md: "20px 0px 20px 31px" }}
         >
           <Stack
             sx={{

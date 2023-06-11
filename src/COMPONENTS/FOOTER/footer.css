@@ -37,6 +37,12 @@
   overflow: hidden;
 }
 
-.adress{
-    display: flex;
+.adress {
+  display: flex;
+}
+
+@media screen and (width <= 991px) {
+  .hr {
+    display: none;
+  }
 }

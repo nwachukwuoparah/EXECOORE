@@ -29,6 +29,7 @@ import Testmonial_card from "../COMPONENTS/TESTIMONIAL/Testmonials_card";
 import Accordion_comp from "../COMPONENTS/Accordion_comp";
 import Counter from "./Counter";
 import Team_id from "../COMPONENTS/Team_id";
+import Footer from "../COMPONENTS/FOOTER/Footer";
 
 const Landing_page = (props) => {
   const [scroll, setScroll] = useState();
@@ -104,8 +105,8 @@ const Landing_page = (props) => {
   useEffect(() => {
     function handleScroll() {
       setScroll(window.pageYOffset / 4);
-      console.log(window.pageYOffset);
-      console.log(window.pageYOffset / 4);
+      // console.log(window.pageYOffset);
+      // console.log(window.pageYOffset / 4);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -115,16 +116,8 @@ const Landing_page = (props) => {
   }, [scroll]);
 
   return (
-    <Container
-      disableGutters={true}
-      maxWidth="100%"
-      sx={{
-        height: "805vh",
-        // overflow: "hidden",
-      }}
-    >
+    <Container disableGutters={true} maxWidth="100%">
       <Hero_section />
-
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -136,7 +129,7 @@ const Landing_page = (props) => {
             lg: "83",
             xl: "85",
           },
-          // height: { xs: "auto", md: "92.5vh" },
+          height: { xs: "292.5vh", md: "92.5vh" },
         }}
       >
         <Grid
@@ -163,8 +156,7 @@ const Landing_page = (props) => {
           text4="Founder & CEO"
         />
       </Container>
-
-      {/*  <Container
+      <Container
         disableGutters={true}
         maxWidth={false}
         sx={{ backgroundColor: "rgb(228, 237, 243)", padding: "100px 0px" }}
@@ -174,7 +166,7 @@ const Landing_page = (props) => {
           maxWidth={false}
           sx={{
             width: {
-              xs: "85%",
+              xs: "81%",
               sm: "85%",
               md: "84%",
               lg: "83",
@@ -185,9 +177,10 @@ const Landing_page = (props) => {
           }}
         >
           <Stack
-            direction="row"
+            direction={{ xs: "column", md: "row" }}
             justifyContent="space-between"
-            alignItems="center"
+            alignItems={{ xs: "left", md: "center" }}
+            gap={{ xs: "30px" }}
           >
             <Stack>
               <Typography
@@ -223,38 +216,27 @@ const Landing_page = (props) => {
             </Stack>
           </Stack>
 
-          <Stack sx={{ bgcolor: "", marginTop: "62px" }}>
-            <Grid
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              gap="30px"
-              sx={{
-                bgcolor: "",
-              }}
-              container
-              // spacing={2}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              xs={5}
-              sm={4}
-              md={20}
-            >
-              {ServiceCard.map((i, index) => (
-                <Grid xs={5} sm={5} md={3.76} key={index}>
-                  <Service_card {...i} />
-                </Grid>
-              ))}
-            </Grid>
-          </Stack>
+          <Grid
+            container
+            columns={16}
+            justifyContent="space-between"
+            rowSpacing={3.5}
+            marginTop={{ xs: "35px", md: "30px" }}
+          >
+            {ServiceCard.map((i, index) => (
+              <Grid item md={5} xs={16} key={index}>
+                <Service_card {...i} />
+              </Grid>
+            ))}
+          </Grid>
         </Container>
       </Container>
-
       <Container
         disableGutters={true}
         maxWidth={false}
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "84%",
             lg: "83",
@@ -262,18 +244,23 @@ const Landing_page = (props) => {
           },
           padding: "100px 0px",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "space-between",
+          gap: { xs: "20px", md: "0px" },
         }}
       >
-        <Stack spacing={4} sx={{ bgcolor: "", width: "49%" }}>
-          <Stack>
+        <Stack
+          spacing={4}
+          sx={{ bgcolor: "", width: { xs: "100%", md: "49%" } }}
+        >
+          <Stack width={{ xs: "70%", md: "100%" }}>
             <Typography
               variant="p"
               sx={{
                 fontWeight: 700,
                 color: "#03BFCB",
                 lineHeight: "30px",
-                fontSize: "14px",
+                fontSize: { xs: "13px", md: "14px" },
               }}
             >
               CONTACT US NOW
@@ -299,25 +286,26 @@ const Landing_page = (props) => {
               fontSize: "14px",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod
-            tempor incididunt utlabore et dolore aliqua.
+            Lorem ipsum dolor sit amet
+            <br /> consectetur adipiscing elitsed do eiusmod tempor incididunt
+            utlabore et dolore aliqua.
           </Typography>
           <Typography
             sx={{
               fontWeight: 600,
               color: "rgb(64, 77, 96)",
               lineHeight: "30px",
-              fontSize: "14px",
+              fontSize: { xs: "13px", md: "14px" },
             }}
           >
             You accept our policy
           </Typography>
         </Stack>
-        <Stack sx={{ width: "49%", bgcolor: "" }}>
+
+        <Stack sx={{ width: { xs: "100%", md: "49%" }, bgcolor: "" }}>
           <Contact_form />
         </Stack>
       </Container>
-
       <Parallax
         className="Parallax"
         // blur={{ min: -20, max: -20 }}
@@ -337,10 +325,11 @@ const Landing_page = (props) => {
           spacing={7.3}
         >
           <a className="Parallax_link"></a>
+
           <Typography
             sx={{
               lineHeight: "37px",
-              maxWidth: "600px",
+              width: { xs: "250px", md: "600px" },
               fontSize: "25px",
               fontWeight: 900,
             }}
@@ -349,7 +338,10 @@ const Landing_page = (props) => {
             and strong connection withs software and hardware communication
           </Typography>
 
-          <Stack bgcolor="" height="50px" direction="row">
+          <Stack
+            spacing={{ xs: 6, md: 0 }}
+            direction={{ xs: "column", md: "row" }}
+          >
             {[
               { image: logo_1, border: false },
               { image: logo_2, border: true },
@@ -362,10 +354,9 @@ const Landing_page = (props) => {
                 direction="row"
                 alignItems="center"
                 justifyContent="center"
-                height="100%"
                 bgcolor=""
                 padding={i.border ? "0px 22.5px" : "0px 30px 0px 0px"}
-                borderLeft={i.border && "1px solid #03bfcb"}
+                borderLeft={{ xs: "none", md: i.border && "1px solid #03bfcb" }}
               >
                 <img style={{ width: "128px", height: "30px" }} src={i.image} />
               </Stack>
@@ -373,8 +364,7 @@ const Landing_page = (props) => {
           </Stack>
         </Stack>
       </Parallax>
-
-      <Container
+      {/* <Container
         disableGutters={true}
         maxWidth={false}
         sx={{
@@ -427,20 +417,21 @@ const Landing_page = (props) => {
             width="100%"
             direction="row"
             justifyContent="space-between"
-            sx={{ cursor: "grab", userSelect: "none" }}
+            sx={{ cursor: "grab", userSelect: "none", overflow: "hidden" }}
+            bgcolor="grey"
           >
             {[1, 2, 3].map((i) => (
               <Testmonial_card />
             ))}
           </Stack>
+        
         </Container>
-      </Container>
-
+      </Container> */}
       <Container
         disableGutters
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "84%",
             lg: "83",
@@ -448,11 +439,11 @@ const Landing_page = (props) => {
           },
           padding: "100px 0px",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "space-between",
-          // bgcolor: "red",
         }}
       >
-        <Stack sx={{ width: "48%" }} spacing={4}>
+        <Stack sx={{ width: { xs: "100%", md: "48%" } }} spacing={4}>
           <Stack>
             <Typography
               variant="h6"
@@ -493,18 +484,19 @@ const Landing_page = (props) => {
           </Typography>
           <Accordion_comp />
         </Stack>
+
         <Stack
           sx={{
-            width: "48.8%",
+            width: { xs: "100%", md: "48.8%" },
             alignSelf: "center",
             bgcolor: "",
             objectFit: "cover",
+            marginTop: { xs: "43px", md: "0px" },
           }}
         >
           <img src={box_3} style={{ width: "100%" }} />
         </Stack>
       </Container>
-
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -516,11 +508,11 @@ const Landing_page = (props) => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="space-between"
           sx={{
             width: {
-              xs: "85%",
+              xs: "81%",
               sm: "85%",
               md: "84%",
               lg: "83",
@@ -528,19 +520,18 @@ const Landing_page = (props) => {
             },
             // bgcolor: "greenyellow",
           }}
+          spacing={4.5}
         >
           <Stack
             sx={{
               width: {
-                xs: "85%",
+                xs: "100%",
                 sm: "85%",
                 md: "48.6%",
                 lg: "83",
                 xl: "85",
               },
-              // bgcolor: "grey",
               objectFit: "contain",
-              // alignItems: "flex-end",
             }}
           >
             <img src={box_4} />
@@ -549,7 +540,7 @@ const Landing_page = (props) => {
           <Stack
             sx={{
               width: {
-                xs: "85%",
+                xs: "100%",
                 sm: "85%",
                 md: "48.5%",
                 lg: "83",
@@ -595,18 +586,19 @@ const Landing_page = (props) => {
               fugiat nulla.
             </Typography>
             <Stack direction="row" justifyContent="space-between">
-              <Box sx={{ width: "22.5%" }}>
-                <img className="benefit_img" src={ui_1} />
-              </Box>
-              <Box sx={{ width: "22.5%" }}>
-                <img className="benefit_img" src={ui_2} />
-              </Box>
-              <Box sx={{ width: "22.5%" }}>
-                <img className="benefit_img" src={ui_3} />
-              </Box>
-              <Box sx={{ width: "22.5%" }}>
-                <img className="benefit_img" src={ui_4} />
-              </Box>
+              {[{ img: ui_1 }, { img: ui_2 }, { img: ui_3 }, { img: ui_4 }].map(
+                (i) => (
+                  <Stack
+                    sx={{
+                      boxShadow: "0 1px 4px rgba(0, 0, 0, 0.15)",
+                      width: { xs: "20.5%", md: "22.5%" },
+                      bgcolor: "grey",
+                    }}
+                  >
+                    <img className="benefit_img" src={i.img} />
+                  </Stack>
+                )
+              )}
             </Stack>
             <Typography
               sx={{
@@ -626,14 +618,14 @@ const Landing_page = (props) => {
         maxWidth={false}
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "84.5%",
             lg: "83",
             xl: "85",
           },
           // bgcolor: "greenyellow",
-          height: "88.2vh",
+          height: { xs: "300vh", md: "88.2vh" },
         }}
       >
         <Counter
@@ -668,8 +660,12 @@ const Landing_page = (props) => {
           ]}
         />
 
-        <Stack direction="row" justifyContent="" bgcolor="">
-          <Stack sx={{ width: "25%" }} spacing={3.7}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          justifyContent=""
+          bgcolor=""
+        >
+          <Stack sx={{ width: { xs: "100%", md: "25%" } }} spacing={3.7}>
             <span>
               <Typography
                 sx={{
@@ -722,7 +718,7 @@ const Landing_page = (props) => {
           <Team_id image={user_9} />
           <Team_id image={user_3} />
         </Stack>
-      </Container> */}
+      </Container>
     </Container>
   );
 };

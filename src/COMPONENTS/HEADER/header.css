@@ -6,13 +6,31 @@
   display: none;
 }
 
+.header_nav {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 81%;
+  color: rgb(0, 71, 103);
+}
+
+.header_nav_active {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 81%;
+  color: #03bfcb;
+}
+
 @media screen and (width <= 991px) {
   .header_image {
     width: 183.5px;
     height: 60%;
   }
   .header_menu {
-    display: block;
+    display: flex;
     font-size: 30px;
     color: #f8f8f8;
   }

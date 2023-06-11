@@ -2,6 +2,7 @@ import {
   Button,
   ButtonGroup,
   Container,
+  Fab,
   IconButton,
   Stack,
   Typography,
@@ -10,6 +11,7 @@ import "./footer.css";
 import React from "react";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { BsDash } from "react-icons/bs";
 const Footer = (props) => {
   return (
@@ -18,19 +20,20 @@ const Footer = (props) => {
       maxWidth={false}
       sx={{
         bgcolor: "#004767",
-        height: "408px",
+        // height: "408px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         paddingTop: "82px",
+        gap: { xs: "84px", md: "80px" },
       }}
     >
       <Stack
-        direction="row"
+        direction={{ xs: "column", md: "row" }}
         justifyContent="space-between"
         sx={{
           width: {
-            xs: "85%",
+            xs: "81%",
             sm: "85%",
             md: "85%",
             // lg: "83",
@@ -40,15 +43,20 @@ const Footer = (props) => {
           margin: "0px auto",
           position: "relative",
         }}
+        spacing={{ xs: 5.8, md: 0 }}
       >
-        <Stack sx={{ width: "30.3%", bgcolor: "" }} spacing={4}>
+        <Stack
+          sx={{ width: { xs: "100%", md: "30.3%" }, bgcolor: "" }}
+          spacing={{ xs: 2, md: 4 }}
+        >
           <Typography
             variant="h5"
             sx={{ fontWeight: 900, fontSize: "21px", color: "#FFF" }}
           >
             EXECOORE
           </Typography>
-          <Stack spacing={3.6}>
+
+          <Stack spacing={{ xs: 2, md: 3.6 }}>
             <Typography
               sx={{
                 fontWeight: 500,
@@ -108,9 +116,14 @@ const Footer = (props) => {
             </ButtonGroup>
           </Stack>
         </Stack>
+
         <Stack
-          sx={{ width: "33.3%", bgcolor: "", paddingLeft: "9px" }}
-          spacing={4}
+          sx={{
+            width: { xs: "100%", md: "33.3%" },
+            bgcolor: "",
+            paddingLeft: { xs: "0px", md: "9px" },
+          }}
+          spacing={{ xs: 1.5, md: 4 }}
         >
           <Typography
             variant="h5"
@@ -145,7 +158,7 @@ const Footer = (props) => {
 
         <Stack
           sx={{
-            minWidth: "33.3%",
+            minWidth: { xs: "100%", md: "33.3%" },
             bgcolor: " rgba(0, 0, 0, 0.11)",
             padding: "30px",
             borderRadius: "3px",
@@ -162,12 +175,12 @@ const Footer = (props) => {
             {
               text1: "Email",
               text2: "contacts@example.com",
-              width: "35%"
+              width: "35%",
             },
             {
               text1: "Phone",
               text2: "(02) 123 333 444",
-              width: "47%"
+              width: "47%",
             },
             {
               text1: "Opening hours",
@@ -175,7 +188,7 @@ const Footer = (props) => {
               width: "27%",
             },
           ].map((i) => (
-            <Stack direction="row">
+            <Stack direction={{ xs: "column", md: "row" }}>
               <Typography
                 sx={{
                   color: "#fff",
@@ -223,10 +236,10 @@ const Footer = (props) => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           sx={{
             width: {
-              xs: "85%",
+              xs: "81%",
               sm: "85%",
               md: "85%",
               lg: "83",
@@ -237,7 +250,7 @@ const Footer = (props) => {
             justifyContent: "space-between",
           }}
         >
-          <Stack direction="row" spacing={0.5}>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={0.5}>
             <Typography
               sx={{
                 fontSize: "12px",
@@ -281,7 +294,6 @@ const Footer = (props) => {
             >
               Contact us{" "}
             </Typography>
-            {/* <Typography>|</Typography> */}
             <Typography
               sx={{
                 fontSize: "12px",
@@ -296,6 +308,30 @@ const Footer = (props) => {
           </Stack>
         </Stack>
       </Container>
+      <Fab
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+        sx={{
+          position: "fixed",
+          top: "670px",
+          right: 20,
+          bgcolor: "#004767",
+          color: "white",
+          transition:"all .5s",
+          ":hover": {
+            bgcolor: "#004767",
+            top: "660px",
+          },
+        }}
+        size="small"
+        aria-label="to top"
+      >
+        <KeyboardArrowUpIcon sx={{ fontSize: "35px" }} />
+      </Fab>
     </Container>
   );
 };

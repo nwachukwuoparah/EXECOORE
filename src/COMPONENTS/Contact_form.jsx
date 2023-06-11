@@ -6,7 +6,7 @@ const Contact_form = (props) => {
     input: {
       //   backgroundColor: "red",
       padding: "16px 5px",
-      width: "48%",
+      width: "100%",
       outline: "none",
       border: "none",
       borderBottom: "1px solid #03BFCB",
@@ -25,10 +25,19 @@ const Contact_form = (props) => {
       maxWidth={false}
       sx={{ display: "flex", flexDirection: "column", gap: "55px" }}
     >
-      <Stack direction="row" justifyContent="space-between">
-        <input style={style.input} name="name" placeholder="Name" />
-        <input style={style.input} name="email" placeholder="Email" />
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        justifyContent="space-between"
+        spacing={{ xs: 7, md: 0 }}
+      >
+        <Stack width={{ md: "48%" }}>
+          <input style={style.input} name="name" placeholder="Name" />
+        </Stack>
+        <Stack width={{ md: "48%" }}>
+          <input style={style.input} name="email" placeholder="Email" />
+        </Stack>
       </Stack>
+
       <Stack spacing={3.6}>
         <textarea
           style={style.textarea}
