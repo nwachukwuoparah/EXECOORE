@@ -364,6 +364,8 @@ const Landing_page = (props) => {
           </Stack>
         </Stack>
       </Parallax>
+
+
       {/* <Container
         disableGutters={true}
         maxWidth={false}
@@ -427,6 +429,8 @@ const Landing_page = (props) => {
         
         </Container>
       </Container> */}
+
+      
       <Container
         disableGutters
         sx={{
