@@ -53,7 +53,7 @@
 
 
 .team_image {
-  width: 96%;
+  width:210px;
   transition: all 0.5s;
 }
 
@@ -79,11 +79,6 @@
 
 
 @media screen and (width <= 991px) {
-  .team_contain {
-    width: 100%;
-    margin-top: 50px;
-  }
-
 
 
 }

@@ -8,15 +8,14 @@ const Team_id = ({ image }) => {
     <Container
       sx={{
         width: { xs: "100%", md: "25%" },
-        paddingRight: "7px",
-        width: "100%",
-        marginTop: "50px",
+        marginTop: {xs:"50px", md:"0px"},
+        padding:"0px"
       }}
-      // className="team_contain"
+      className="team_contain"
     >
       <Container
         sx={{
-          paddingBottom: "100px",
+          paddingBottom: {xs:"100px", md:"100px"},
           position: "relative",
           display: "flex",
           flexDirection: "column",

@@ -630,7 +630,7 @@ const Landing_page = (props) => {
             xl: "85",
           },
           // bgcolor: "greenyellow",
-          paddingBottom: { xs: "150px", md: "" },
+          paddingBottom: { xs: "150px" },
         }}
       >
         <Counter
@@ -668,7 +668,6 @@ const Landing_page = (props) => {
         <Stack
           direction={{ xs: "column", md: "row" }}
           justifyContent=""
-          bgcolor=""
         >
           <Stack sx={{ width: { xs: "100%", md: "25%" } }} spacing={3.7}>
             <span>
