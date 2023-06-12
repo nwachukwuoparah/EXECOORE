@@ -62,6 +62,10 @@
 }
 
 @media screen and (width <= 991px) {
+  .team_image {
+    width: 310px;
+    transition: all 0.5s;
+  }
   .cnt-box-team:hover .caption {
     position: absolute;
     text-align: center;
