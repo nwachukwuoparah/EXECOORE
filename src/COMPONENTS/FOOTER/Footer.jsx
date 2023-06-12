@@ -26,6 +26,7 @@ const Footer = (props) => {
         justifyContent: "space-between",
         paddingTop: "82px",
         gap: { xs: "84px", md: "80px" },
+        // marginTop: "100px",
       }}
     >
       <Stack
@@ -321,7 +322,7 @@ const Footer = (props) => {
           right: 20,
           bgcolor: "#004767",
           color: "white",
-          transition:"all .5s",
+          transition: "all .5s",
           ":hover": {
             bgcolor: "#004767",
             top: "660px",

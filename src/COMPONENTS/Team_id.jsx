@@ -1,15 +1,52 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Container } from "@mui/material";
 import React from "react";
 
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import InstagramIcon from "@mui/icons-material/Instagram";
 const Team_id = ({ image }) => {
   return (
-    <div className="team_contain">  
-      <div className=" cnt-box-team">  
-        <img className="team_image" src={image} alt="image" />  
+    <Container
+      sx={{
+        width: { xs: "100%", md: "25%" },
+        paddingRight: "7px",
+      }}
+      className="team_contain"
+    >
+      <Container
+        sx={{
+          paddingBottom: "100px",
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        className=" cnt-box-team"
+      >
+        <img className="team_image" src={image} alt="image" />
 
-        <div className="caption">
+        <Container
+          sx={{
+            width: "95%",
+            padding: "25px 50px 0 50px",
+            position: "absolute",
+            textAlign: "center",
+            height: "100px",
+            overflow: "hidden",
+            backgroundColor: "#fff",
+            margin: "0px auto",
+            bottom: 0,
+            zIndex: 9,
+            right: 0,
+            left: 0,
+            borderTop: "1px solid rgba(10, 70, 103, 0.25)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "6px",
+            transition: "all 0.5s",
+          }}
+          className="caption"
+        >
           <Typography
             sx={{
               fontWeight: 700,
@@ -50,9 +87,9 @@ const Team_id = ({ image }) => {
           >
             Lorem ipsum dolor sitamet consectetur eiusmo.
           </Typography>
-        </div>
-      </div>
-    </div>
+        </Container>
+      </Container>
+    </Container>
   );
 };
 

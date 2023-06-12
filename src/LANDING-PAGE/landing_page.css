@@ -51,10 +51,6 @@
 
 /* TEAM */
 
-.team_contain {
-  width: 25%;
-  padding-right: 7px;
-}
 
 .team_image {
   width: 96%;
@@ -62,38 +58,11 @@
 }
 
 .team_contain:hover .team_image {
-  width: 100%;
+  transform: scale(1.1);
   object-fit: contain;
 }
 
-.cnt-box-team {
-  padding-bottom: 100px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.caption {
-  width: 95%;
-  padding: 25px 50px 0 50px;
-  position: absolute;
-  text-align: center;
-  height: 100px;
-  overflow: hidden;
-  background-color: #fff;
-  margin: 0px auto;
-  bottom: 0;
-  z-index: 9;
-  right: 0;
-  left: 0;
-  border-top: 1px solid rgba(10, 70, 103, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.5s;
-}
 
 .cnt-box-team:hover .caption {
   position: absolute;
@@ -114,4 +83,7 @@
     width: 100%;
     margin-top: 50px;
   }
+
+
+
 }

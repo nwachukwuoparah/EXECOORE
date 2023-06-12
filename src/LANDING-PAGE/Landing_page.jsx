@@ -182,7 +182,7 @@ const Landing_page = (props) => {
             justifyContent="space-between"
             alignItems={{ xs: "left", md: "center" }}
             gap={{ xs: "30px" }}
-          >
+          > 
             <Stack>
               <Typography
                 sx={{
@@ -630,7 +630,7 @@ const Landing_page = (props) => {
             xl: "85",
           },
           // bgcolor: "greenyellow",
-          height: { xs: "300vh", md: "88.2vh" },
+          paddingBottom: { xs: "150px", md: "" },
         }}
       >
         <Counter

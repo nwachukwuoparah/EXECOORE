@@ -9,10 +9,12 @@ import "animate.css";
 const Hero_section = (props) => {
   return (
     <Container
+    disableGutters={true}
+    maxWidth={false}
       sx={{
         width: "100%",
         marginTop: { xs: "65px", md: "149px" },
-        paddingBottom: { xs: "170px", md: "170px" },
+        paddingBottom: { xs: "170px", md: "11px" },
         /* background-color: grey, */
         backgroundSize: "cover",
         backgroundPosition: "center center",
