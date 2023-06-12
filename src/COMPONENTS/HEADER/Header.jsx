@@ -7,7 +7,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Logo from "./image/logo.svg";
 import EN from "./image/en.png";
-import { FiMenu } from "react-icons/fi";
+// import { FiMenu } from "react-icons/fi";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { NavLink } from "react-router-dom";
 const Header = (props) => {
   const [menu, setMenu] = useState(false);
@@ -107,7 +108,14 @@ const Header = (props) => {
           disableGutters
         >
           <img className="header_image" src={Logo} alt="logo" />
-          <FiMenu onClick={() => setMenu(!menu)} className="header_menu" />
+          <MenuRoundedIcon
+            sx={{
+              display: { xs: "flex", md: "none" },
+              fontSize: "30px",
+              color: "#f8f8f8",
+            }}
+            onClick={() => setMenu(!menu)}
+          />
           <Stack
             varant="div"
             direction="row"

@@ -2,9 +2,6 @@
   width: 21.9%;
   /* background-color: red; */
 }
-.header_menu {
-  display: none;
-}
 
 .header_nav {
   text-decoration: none;
@@ -28,10 +25,5 @@
   .header_image {
     width: 183.5px;
     height: 60%;
-  }
-  .header_menu {
-    display: flex;
-    font-size: 30px;
-    color: #f8f8f8;
   }
 }
