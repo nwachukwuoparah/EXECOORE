@@ -318,14 +318,14 @@ const Footer = (props) => {
         }}
         sx={{
           position: "fixed",
-          top: "670px",
+          top: { xs: "91vh", md: "670px" },
           right: 20,
           bgcolor: "#004767",
           color: "white",
           transition: "all .5s",
           ":hover": {
             bgcolor: "#004767",
-            top: "660px",
+            top: { xs: "91vh", md: "660px" },
           },
         }}
         size="small"

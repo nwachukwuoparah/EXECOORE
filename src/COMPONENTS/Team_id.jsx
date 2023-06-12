@@ -27,7 +27,7 @@ const Team_id = ({ image }) => {
 
         <Container
           sx={{
-            width: "95%",
+            width: "100%",
             padding: "25px 50px 0 50px",
             position: "absolute",
             textAlign: "center",

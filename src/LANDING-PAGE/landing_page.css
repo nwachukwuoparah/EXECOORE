@@ -56,14 +56,13 @@
   transition: all 0.5s;
 }
 
-.team_contain:hover .team_image {
-  transform: scale(1.1);
-  object-fit: contain;
-}
-
 @media screen and (width <= 991px) {
+  .team_contain:hover .team_image {
+    transform: scale(1.1);
+    object-fit: contain;
+  }
   .team_image {
-    width: 310px;
+    width: 281px;
     transition: all 0.5s;
   }
   .cnt-box-team:hover .caption {
