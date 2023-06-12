@@ -51,9 +51,8 @@
 
 /* TEAM */
 
-
 .team_image {
-  width:210px;
+  width: 210px;
   transition: all 0.5s;
 }
 
@@ -62,23 +61,17 @@
   object-fit: contain;
 }
 
-
-
-.cnt-box-team:hover .caption {
-  position: absolute;
-  text-align: center;
-  height: 236px;
-  overflow: hidden;
-  background-color: #fff;
-  width: 100%;
-  bottom: 0;
-  z-index: 9;
-  right: 0;
-  left: 0;
-}
-
-
 @media screen and (width <= 991px) {
-
-
+  .cnt-box-team:hover .caption {
+    position: absolute;
+    text-align: center;
+    height: 206px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+    left: 0;
+  }
 }

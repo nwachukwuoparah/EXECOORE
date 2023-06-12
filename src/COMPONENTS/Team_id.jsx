@@ -45,6 +45,7 @@ const Team_id = ({ image }) => {
             alignItems: "center",
             gap: "6px",
             transition: "all 0.5s",
+
           }}
           className="caption"
         >
