@@ -20,6 +20,7 @@ const Header = (props) => {
   xl: 1536, */
   // }
 
+  console.log(1650 * 15);
   const [scroll, setScroll] = useState(false);
   const [drop, setDrop] = useState(false);
   useEffect(() => {
@@ -98,7 +99,7 @@ const Header = (props) => {
           sx={{
             display: scroll ? { md: "none", xs: "flex" } : "flex",
             alignItems: "center",
-            width: { xs: "81%", sm: "92%", md: "84.4%" },
+            width: { xs: "85%", sm: "92%", md: "84.4%" },
             justifyContent: "space-between",
             height: { xs: "65px", md: "100px" },
             // bgcolor: "grey",
@@ -231,6 +232,7 @@ const Header = (props) => {
           </Container>
         </Container>
       </Container>
+
       <Stack
         varant="div"
         sx={
@@ -243,14 +245,14 @@ const Header = (props) => {
                 overflow: "hidden",
                 transition: drop ? "ease-in-out  1s" : null,
                 backgroundColor: "white",
-                top: drop ? "65px" : "-305px",
+                top: drop ? "65px" : "-430px",
                 // top:  "-240px",
                 zIndex: 800,
               }
             : {
                 display: { xs: "block", md: "none" },
                 position: "fixed",
-                height: menu ? "88vh" : "0px",
+                height: menu ? "558px" : "0px",
                 bgcolor: "lightgreen",
                 overflow: "hidden",
                 transition: "ease-in-out 1s",

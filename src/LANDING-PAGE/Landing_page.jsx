@@ -123,13 +123,13 @@ const Landing_page = (props) => {
         maxWidth={false}
         sx={{
           width: {
-            xs: "81%",
+            xs: "85%",
             sm: "85%",
             md: "84%",
             lg: "83",
             xl: "85",
           },
-          height: { xs: "292.5vh", md: "92.5vh" },
+          padding: { xs: "0px 0px 110px 0px", md: "" },
         }}
       >
         <Grid
@@ -156,6 +156,7 @@ const Landing_page = (props) => {
           text4="Founder & CEO"
         />
       </Container>
+
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -166,7 +167,7 @@ const Landing_page = (props) => {
           maxWidth={false}
           sx={{
             width: {
-              xs: "81%",
+              xs: "85%",
               sm: "85%",
               md: "84%",
               lg: "83",
@@ -231,6 +232,7 @@ const Landing_page = (props) => {
           </Grid>
         </Container>
       </Container>
+
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -306,6 +308,7 @@ const Landing_page = (props) => {
           <Contact_form />
         </Stack>
       </Container>
+
       <Parallax
         className="Parallax"
         // blur={{ min: -20, max: -20 }}
@@ -364,7 +367,6 @@ const Landing_page = (props) => {
           </Stack>
         </Stack>
       </Parallax>
-
 
       {/* <Container
         disableGutters={true}
@@ -430,7 +432,6 @@ const Landing_page = (props) => {
         </Container>
       </Container> */}
 
-      
       <Container
         disableGutters
         sx={{
@@ -501,6 +502,7 @@ const Landing_page = (props) => {
           <img src={box_3} style={{ width: "100%" }} />
         </Stack>
       </Container>
+
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -516,13 +518,12 @@ const Landing_page = (props) => {
           justifyContent="space-between"
           sx={{
             width: {
-              xs: "81%",
+              xs: "85%",
               sm: "85%",
               md: "84%",
               lg: "83",
               xl: "85",
             },
-            // bgcolor: "greenyellow",
           }}
           spacing={4.5}
         >
@@ -622,7 +623,7 @@ const Landing_page = (props) => {
         maxWidth={false}
         sx={{
           width: {
-            xs: "81%",
+            xs: "85%",
             sm: "85%",
             md: "84.5%",
             lg: "83",

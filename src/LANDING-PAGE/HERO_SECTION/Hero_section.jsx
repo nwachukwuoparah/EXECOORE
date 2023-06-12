@@ -13,7 +13,7 @@ const Hero_section = (props) => {
         maxWidth={false}
         sx={{
           width: {
-            xs: "81%",
+            xs: "85%",
             sm: "85%",
             md: "84.3%",
             // lg: "83",
@@ -36,37 +36,36 @@ const Hero_section = (props) => {
             variant="h6"
             sx={{
               fontWeight: 900,
-              fontSize: { md: "21px", xs: "18px" },
+              fontSize: { md: "21px", xs: "21px" },
               lineHeight: { md: "", xs: "30px" },
               color: " #03BFCB",
             }}
           >
             ACCELERATE THE USER EXPERIENCE
           </Typography>
-          <div className="slider animate__fadeInUp">
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: 900,
-                lineHeight: { xs: "45px", md: "65px" },
-                fontSize: { xs: "33px", md: "45px" },
-                color: "rgb(0, 71, 103)",
-                letterSpacing: "2px",
-              }}
-            >
-              HARDWARE TO POWER
-              <br />
-              YOUR BUSINESS
-            </Typography>
-          </div>
+
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 900,
+              lineHeight: { xs: "45px", md: "65px" },
+              fontSize: { xs: "33px", md: "45px" },
+              color: "rgb(0, 71, 103)",
+              letterSpacing: "2px",
+            }}
+          >
+            HARDWARE TO POWER
+            <br />
+            YOUR BUSINESS
+          </Typography>
 
           <Typography
             variant="body1"
             sx={{
               fontWeight: 500,
-              fontSize: { xs: "13px", md: "14px" },
+              fontSize: { xs: "14px", md: "14px" },
               color: "rgb(64, 77, 96)",
-              lineHeight: "30px",
+              lineHeight: "28px",
               // bgcolor: "red",
               paddingTop: "10.5px",
             }}
@@ -86,7 +85,6 @@ const Hero_section = (props) => {
                 md: "non-wrap",
                 justifyContent: { xs: "center" },
               },
-              // bgcolor: "red",
             }}
           >
             <Button
