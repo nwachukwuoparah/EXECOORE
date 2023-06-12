@@ -9,8 +9,10 @@ const Team_id = ({ image }) => {
       sx={{
         width: { xs: "100%", md: "25%" },
         paddingRight: "7px",
+        width: "100%",
+        marginTop: "50px",
       }}
-      className="team_contain"
+      // className="team_contain"
     >
       <Container
         sx={{
