@@ -3,11 +3,24 @@ import { Container, Stack, Typography, colors } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import Image from ".././Images/man-3.png";
+import hd_1 from "../Images/hd-1.jpeg";
 import "animate.css";
 
 const Hero_section = (props) => {
   return (
-    <section className="hero_section">
+    <Container
+      sx={{
+        width: "100%",
+        marginTop: { xs: "65px", md: "149px" },
+        paddingBottom: { xs: "170px", md: "170px" },
+        /* background-color: grey, */
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        position: "relative",
+        backgroundImage: `url(${hd_1})`,
+      }}
+      // className="hero_section"
+    >
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -154,7 +167,7 @@ const Hero_section = (props) => {
           <img src={Image} className="image" />
         </Stack>
       </Container>
-    </section>
+    </Container>
   );
 };
 

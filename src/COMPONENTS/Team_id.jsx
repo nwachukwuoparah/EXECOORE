@@ -5,9 +5,9 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import InstagramIcon from "@mui/icons-material/Instagram";
 const Team_id = ({ image }) => {
   return (
-    <div className="team_contain">
-      <div className=" cnt-box-team">
-        <img className="team_image" src={image} alt="image" />
+    <div className="team_contain">  
+      <div className=" cnt-box-team">  
+        <img className="team_image" src={image} alt="image" />  
 
         <div className="caption">
           <Typography
