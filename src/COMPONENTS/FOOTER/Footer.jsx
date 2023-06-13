@@ -309,7 +309,7 @@ const Footer = (props) => {
           </Stack>
         </Stack>
       </Container>
-      <Fab
+      {/* <Fab
         onClick={() => {
           window.scrollTo({
             top: 0,
@@ -332,7 +332,7 @@ const Footer = (props) => {
         aria-label="to top"
       >
         <KeyboardArrowUpIcon sx={{ fontSize: "35px" }} />
-      </Fab>
+      </Fab> */}
     </Container>
   );
 };

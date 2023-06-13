@@ -78,7 +78,7 @@ const Header = (props) => {
           scroll
             ? {
                 bgcolor: "#004767",
-                position: { md: "fixed", sm: "relative", xs: "fixed" },
+                position: { md: "fixed", sm: "fixed", xs: "fixed" },
                 width: "100%",
                 top: drop ? "0px" : "-150px",
                 zIndex: 1000,
@@ -87,7 +87,7 @@ const Header = (props) => {
               }
             : {
                 bgcolor: "#004767",
-                position: { md: "fixed", sm: "relative", xs: "fixed" },
+                position: { md: "fixed", sm: "fixed", xs: "fixed" },
                 top: "0px",
                 width: "100%",
                 zIndex: 1000,
@@ -110,7 +110,7 @@ const Header = (props) => {
           <img className="header_image" src={Logo} alt="logo" />
           <MenuRoundedIcon
             sx={{
-              display: { xs: "flex", md: "none" },
+              display:{ xs:"flex", md:"none"},
               fontSize: "30px",
               color: "#f8f8f8",
             }}

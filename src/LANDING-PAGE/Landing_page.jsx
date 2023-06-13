@@ -118,6 +118,8 @@ const Landing_page = (props) => {
   return (
     <Container disableGutters={true} maxWidth="100%">
       <Hero_section />
+
+      
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -367,6 +369,8 @@ const Landing_page = (props) => {
           </Stack>
         </Stack>
       </Parallax>
+
+
 
       {/* <Container
         disableGutters={true}
@@ -618,6 +622,8 @@ const Landing_page = (props) => {
           </Stack>
         </Stack>
       </Container>
+
+
       <Container
         disableGutters={true}
         maxWidth={false}
@@ -668,6 +674,7 @@ const Landing_page = (props) => {
         <Stack
           direction={{ xs: "column", md: "row" }}
           justifyContent=""
+         
         >
           <Stack sx={{ width: { xs: "100%", md: "25%" } }} spacing={3.7}>
             <span>

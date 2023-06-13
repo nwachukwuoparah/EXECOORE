@@ -13,7 +13,7 @@ const Hero_section = (props) => {
     maxWidth={false}
       sx={{
         width: "100%",
-        marginTop: { xs: "65px", md: "149px" },
+        marginTop: { xs: "65px", sm:"2px", md: "149px" },
         paddingBottom: { xs: "170px", md: "11px" },
         /* background-color: grey, */
         backgroundSize: "cover",
