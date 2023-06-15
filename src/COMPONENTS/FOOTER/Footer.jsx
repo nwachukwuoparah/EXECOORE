@@ -309,7 +309,7 @@ const Footer = (props) => {
           </Stack>
         </Stack>
       </Container>
-      {/* <Fab
+      <Fab
         onClick={() => {
           window.scrollTo({
             top: 0,
@@ -318,21 +318,21 @@ const Footer = (props) => {
         }}
         sx={{
           position: "fixed",
-          top: { xs: "91vh", md: "670px" },
-          right: 20,
+          top: "91vh",
+          right: "20px",
           bgcolor: "#004767",
           color: "white",
           transition: "all .5s",
           ":hover": {
             bgcolor: "#004767",
-            top: { xs: "91vh", md: "660px" },
+            top: "90vh",
           },
         }}
         size="small"
         aria-label="to top"
       >
         <KeyboardArrowUpIcon sx={{ fontSize: "35px" }} />
-      </Fab> */}
+      </Fab>
     </Container>
   );
 };
